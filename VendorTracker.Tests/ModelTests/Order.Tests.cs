@@ -14,5 +14,14 @@ namespace VendorTracker.Test
       Order testOrder = new Order("bread", 2);
       Assert.AreEqual(typeof(Order), testOrder.GetType());
     }
+    [TestMethod]
+    public void GetPropertyTypes_InstantiateTypeAndQuantity_StringAndNumber()
+    {
+      Order testOrder = new Order("bread", 2);
+      string type = "bread";
+      int quantity = 1;
+      Assert.AreEqual(type, testOrder.Type);
+      Assert.AreEqual(quantity, testOrder.Quantity);
+    }
   }
 }
