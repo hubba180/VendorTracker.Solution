@@ -10,7 +10,7 @@ namespace VendorTracker.Models
     public Vendor(string name, string description)
     {
       Name = name; 
-      Description = "description";
+      Description = description;
       _instances.Add(this);
     }
     public static void ClearAll()
