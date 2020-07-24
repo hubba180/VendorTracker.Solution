@@ -17,7 +17,7 @@ __
 ## Specs
 | Behavior    | Input | Output | Status |
 | :---------- | ----- | ------ | -----: |
-| Program initially lands on a home page offering links to vendor list |  |  | Red |
+| Program initially lands on a home page offering links to vendor list |  |  | Green |
 | User may view a list of vendors they've added | Tommy's Tacos | -Tommy's Tacos | Red |
 | The user will see a message if no vendors are added to list |  | "you have no vendors added" | Red |
 | User may add to a list of Vendors | Tommy's Tacos | Tommy's Tacos | Red |
