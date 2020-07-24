@@ -1,11 +1,12 @@
-@using VendorTracker.Models;
 @using System;
 @using System.Collections.Generic;
+@using VendorTracker.Models;
 
-@* <h2>Showing order lists for: @model["vendor"].Name</h2>
+<h1>@Model["vendor"].Name</h1>
+
 <ul>
-  @foreach (Order element in model["orders"])
+  @foreach (Order element in Model["orders"])
   {
-    <li>@element.Name</li>
+    <li>@element.Type : @element.Quantity</li>
   }
-</ul> *@
+</ul>
