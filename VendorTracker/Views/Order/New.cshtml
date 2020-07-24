@@ -1,5 +1,5 @@
 @using VendorTracker.Models;
-<form action="/vendors/{vendorId}/orders" method="post">
+<form action="/vendors/@Model.Id/orders" method="post">
   <Label for="orderType">What does the order consist of?</Label><br>
   <select  id="orderType" name="orderType">
   <option value="bread">Bread</option>

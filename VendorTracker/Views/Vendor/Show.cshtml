@@ -2,7 +2,7 @@
 @using System.Collections.Generic;
 @using VendorTracker.Models;
 
-<h1>@Model["vendor"].Name</h1>
+<h1>@Model["vendor"].Name @Model["vendor"].Id</h1>
 
 @if (Model["orders"].Count == 0)
 {
@@ -11,7 +11,7 @@
 <ul>
   @foreach (Order element in Model["orders"])
   {
-    <li>@element.Type : @element.Quantity</li>
+    <li>@element.Quantity @element.Type</li>
   }
 </ul>
 <br>
