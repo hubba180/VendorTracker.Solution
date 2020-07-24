@@ -4,9 +4,17 @@
 
 <h1>@Model["vendor"].Name</h1>
 
+@if (Model["orders"].Count == 0)
+{
+  <h4>There are no orders associated with this vendor</h4>
+}
 <ul>
   @foreach (Order element in Model["orders"])
   {
     <li>@element.Type : @element.Quantity</li>
   }
 </ul>
+<br>
+<br>
+<a href="/vendors/@Model["vendor"].Id/orders/new">add a new order to this vendor</a><br>
+<a href="/">Home</a>

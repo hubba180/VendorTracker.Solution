@@ -25,6 +25,10 @@ namespace VendorTracker.Models
     {
       return _instances;
     }
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
+    }
     public static Vendor Find(int searchId)
     { 
       for ( int i = 0; i < _instances.Count; i++)

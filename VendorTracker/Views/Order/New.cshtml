@@ -1,0 +1,11 @@
+@using VendorTracker.Models;
+<form action="/vendors/{vendorId}/orders" method="post">
+  <Label for="orderType">What does the order consist of?</Label><br>
+  <select  id="orderType" name="orderType">
+  <option value="bread">Bread</option>
+  <option value="pastry">Pastry</option>
+  </select><br><br>
+  <label for="orderQuantity">How much did the order consist of?</label><br>
+  <input type="number" id="orderQuantity" name="orderQuantity">
+  <button type="submit">Add order</button>
+</form>

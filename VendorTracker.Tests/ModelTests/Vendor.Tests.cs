@@ -70,5 +70,15 @@ namespace VendorTracker.Test
       Vendor findbyId = Vendor.Find(testVendorId);
       Assert.AreEqual(testVendor, findbyId);
     }
+    [TestMethod]
+    public void AddOrder_AddOrderObjectToOrdersProperty_Void()
+    {
+      Order testOrder = new Order("bread", 2);
+      Vendor testVendor = new Vendor("Tommy", "great food");
+      testVendor.AddOrder(testOrder);
+      int orderListLength = testVendor.Orders.Count;
+      int correctCount = 1;
+      Assert.AreEqual(correctCount, orderListLength);
+    }
   }
 }
