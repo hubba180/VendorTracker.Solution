@@ -17,9 +17,9 @@ namespace VendorTracker.Test
     [TestMethod]
     public void GetPropertyTypes_InstantiateTypeAndQuantity_StringAndNumber()
     {
-      Order testOrder = new Order("bread", 2);
-      string type = "bread";
-      int quantity = 1;
+      Order testOrder = new Order("Bread", 2);
+      string type = "Bread";
+      int quantity = 2;
       Assert.AreEqual(type, testOrder.Type);
       Assert.AreEqual(quantity, testOrder.Quantity);
     }
