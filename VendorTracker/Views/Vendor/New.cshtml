@@ -1,6 +1,10 @@
 <h3>Add a new vendor by filling out the form below</h3>
 <form action="/vendors" method="post">
   <Label for="vendorName">New Vendor Name: </Label><br>
-  <input type="text" id="vendorName" name="vendorName">
+  <input type="text" id="vendorName" name="vendorName" required><br><br>
+  <Label for="vendorDesc">Description: </Label><br>
+  <input type="text" id="vendorDesc" name="vendorDesc" required><br><br>
   <button type="submit">Add vendor</button>
 </form>
+
+<a href="/">Go back</a>
