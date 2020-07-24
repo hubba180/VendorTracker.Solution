@@ -8,7 +8,7 @@ namespace VendorTracker.Models
     public string Name { get; set; }
     public Vendor(string name)
     {
-      Name = "name"; 
+      Name = name; 
       _instances.Add(this);
     }
   }
