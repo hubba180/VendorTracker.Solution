@@ -9,8 +9,16 @@ namespace VendorTracker.Test
     [TestMethod]
     public void VendorConstructor_ProperlyInstantiateVendor_Vendor()
     {
-      Vendor testVendor = new Vendor();
+      Vendor testVendor = new Vendor("Kenny");
       Assert.AreEqual(typeof(Vendor), testVendor.GetType());
+    }
+    [TestMethod]
+    public void VendorName_ProperlySetVendorNameAndGetProperty_String()
+    {
+      string testName = "Kenny";
+      Vendor testVendor = new Vendor(testName);
+      string propertyName = testVendor.Name;
+      Assert.AreEqual(testName, propertyName);
     }
   }
 }
