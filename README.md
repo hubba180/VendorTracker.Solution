@@ -15,14 +15,14 @@ _The purpose of this application is to buld off of a previous project of mine ca
 * type dotnet run in the command line to run the program
 __
 ## Specs
-| Behavior    | Input | Output |
-| :---------- | ----- | -----: |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| Behavior    | Input | Output | Status |
+| :---------- | ----- | ------ | -----: |
+| User may add to a list of Vendors | Tommy's Tacos | Tommy's Tacos | Red |
+| User may add a description to each vendor | "Great Food" | "Great Food" | Red |
+| User may create an Order to be affiliated with a vendor | Tommy's Tacos - 12 bread | Tommy's Tacos - Order for 12 bread | Red |
+| User may add more properties to an order | 12 bread, $25, 7/24/2020 | 12 bread, $25, 7/24/2020 | Red |
+|  |  |  |  |
+|  |  |  |  |
 
 
 ## Known Bugs
