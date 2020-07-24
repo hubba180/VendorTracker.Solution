@@ -6,8 +6,12 @@ using VendorTracker.Models;
 namespace VendorTracker.Test
 {
   [TestClass]
-  public class OrderTests
+  public class OrderTests : IDisposable
   {
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }
     [TestMethod]
     public void OrderConstructor_InstantiateNewOrderObject_Order()
     {
@@ -34,6 +38,13 @@ namespace VendorTracker.Test
       int answer2 = 10;
       Assert.AreEqual(answer1, breadOrder.Price());
       Assert.AreEqual(answer2, pastryOrder.Price());
+    }
+    [TestMethod]
+    public void GetAll_ReturnStaticListForOrders_List()
+    {
+      List<Order> testList = Order.GetAll();
+      List<Order> result = new List<Order> {};
+      CollectionAssert.AreEqual(testList, result);
     }
   }
 }

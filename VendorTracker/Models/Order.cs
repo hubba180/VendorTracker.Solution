@@ -1,15 +1,21 @@
+using System.Collections.Generic;
+
 namespace VendorTracker.Models
 {
   public class Order
   {
+    private static List<Order> _instances = new List<Order> {};
     public string Type { get; set; }
     public int Quantity { get; set; }
     public string Date { get; set; }
+    public int Id { get; }
     public Order(string type, int quantity, string date)
     {
       Type = type;
       Quantity = quantity;
       Date = date;
+      _instances.Add(this);
+      Id = _instances.Count;
     }
     public int Price()
     {
@@ -36,6 +42,14 @@ namespace VendorTracker.Models
       } else{
         return 0;
       }
+    }
+    public static List<Order> GetAll()
+    {
+      return _instances;
+    }
+    public static void ClearAll()
+    {
+      _instances.Clear();
     }
   }
 }
