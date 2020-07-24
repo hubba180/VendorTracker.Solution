@@ -1,11 +1,17 @@
+using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VendorTracker.Models;
 
 namespace VendorTracker.Test
 {
   [TestClass]
-  public class VendorTests
+  public class VendorTests 
   {
+    // public void Dispose()
+    // {
+    //   Vendor.ClearAll();
+    // }
     [TestMethod]
     public void VendorConstructor_ProperlyInstantiateVendor_Vendor()
     {
@@ -29,6 +35,13 @@ namespace VendorTracker.Test
       testVendor.Name = resetName;
       string propertyName = testVendor.Name;
       Assert.AreEqual(resetName, propertyName);
+    }
+    [TestMethod]
+    public void GetAll_ReturnStaticListForVendors_List()
+    {
+      List<Vendor> testList = Vendor.GetAll();
+      List<Vendor> result = new List<Vendor> {};
+      CollectionAssert.AreEqual(testList, result);
     }
   }
 }

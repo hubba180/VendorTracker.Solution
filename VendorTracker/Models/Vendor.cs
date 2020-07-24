@@ -11,5 +11,13 @@ namespace VendorTracker.Models
       Name = name; 
       _instances.Add(this);
     }
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
+    public static List<Vendor> GetAll()
+    {
+      return _instances;
+    }
   }
 }
