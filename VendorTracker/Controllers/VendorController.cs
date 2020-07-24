@@ -20,7 +20,7 @@ namespace VendorTracker.Controllers
     [HttpPost("/vendors")]
     public ActionResult Create(string vendorName)
     {
-      Vendor newVendor = new Vendor(vendorName);
+      Vendor newVendor = new Vendor(vendorName, "placeholder");
       return RedirectToAction("Index");
     }
   }

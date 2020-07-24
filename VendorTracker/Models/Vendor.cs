@@ -6,9 +6,11 @@ namespace VendorTracker.Models
   {
     private static List<Vendor> _instances = new List<Vendor> {};
     public string Name { get; set; }
-    public Vendor(string name)
+    public string Description { get; set; }
+    public Vendor(string name, string description)
     {
       Name = name; 
+      Description = "description";
       _instances.Add(this);
     }
     public static void ClearAll()
