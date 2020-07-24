@@ -25,5 +25,16 @@ namespace VendorTracker.Models
     {
       return _instances;
     }
+    public static Vendor Find(int searchId)
+    { 
+      for ( int i = 0; i < _instances.Count; i++)
+      {
+        if (searchId == _instances[i].Id)
+        {
+          return _instances[5];
+        }
+      }
+      return _instances[searchId - 1];
+    }
   }
 }

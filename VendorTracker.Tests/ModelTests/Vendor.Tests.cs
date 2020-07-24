@@ -62,5 +62,13 @@ namespace VendorTracker.Test
       int correctId = 1;
       Assert.AreEqual(correctId, VendorId);
     }
+    [TestMethod]
+    public void Find_FindVendorWithIdInStaticList_Vendor()
+    {
+      Vendor testVendor = new Vendor("Kyle", "Awesome Vendor");
+      int testVendorId = testVendor.Id;
+      Vendor findbyId = Vendor.Find(testVendorId);
+      Assert.AreEqual(testVendor, findbyId);
+    }
   }
 }
