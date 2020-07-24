@@ -28,8 +28,8 @@ namespace VendorTracker.Test
     {
       Order breadOrder = new Order("Bread", 6);
       Order pastryOrder = new Order("Pastry", 6);
-      int answer1 = 21;
-      int answer2 = 11;
+      int answer1 = 20;
+      int answer2 = 10;
       Assert.AreEqual(answer1, breadOrder.Price());
       Assert.AreEqual(answer2, pastryOrder.Price());
     }
