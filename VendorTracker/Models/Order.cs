@@ -51,5 +51,16 @@ namespace VendorTracker.Models
     {
       _instances.Clear();
     }
+    public static Order Find(int searchId)
+    {
+      for ( int i = 0; i < _instances.Count; i++)
+      {
+        if (searchId == _instances[i].Id)
+        {
+          return _instances[i];
+        }
+      }
+      return _instances[searchId - 1];
+    }
   }
 }

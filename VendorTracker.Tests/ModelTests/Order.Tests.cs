@@ -46,5 +46,13 @@ namespace VendorTracker.Test
       List<Order> result = new List<Order> {};
       CollectionAssert.AreEqual(testList, result);
     }
+    [TestMethod]
+    public void Find_FindOrderWithIdInStaticList_Order()
+    {
+      Order testOrder = new Order("Bread", 2, "7/24/2020");
+      int testOrderId = testOrder.Id;
+      Order findbyId = Order.Find(testOrderId);
+      Assert.AreEqual(testOrder, findbyId);
+    }
   }
 }
