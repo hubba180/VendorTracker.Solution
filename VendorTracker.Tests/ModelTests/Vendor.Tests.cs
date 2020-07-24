@@ -20,5 +20,15 @@ namespace VendorTracker.Test
       string propertyName = testVendor.Name;
       Assert.AreEqual(testName, propertyName);
     }
+    [TestMethod]
+    public void ResetVendorName_ResetAVendorsName_String()
+    {
+      string testName = "Kenny";
+      string resetName = "George";
+      Vendor testVendor = new Vendor(testName);
+      testVendor.Name = resetName;
+      string propertyName = testVendor.Name;
+      Assert.AreEqual(resetName, propertyName);
+    }
   }
 }
