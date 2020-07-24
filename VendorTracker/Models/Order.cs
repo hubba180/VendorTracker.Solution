@@ -4,10 +4,12 @@ namespace VendorTracker.Models
   {
     public string Type { get; set; }
     public int Quantity { get; set; }
-    public Order(string type, int quantity)
+    public string Date { get; set; }
+    public Order(string type, int quantity, string date)
     {
       Type = type;
       Quantity = quantity;
+      Date = date;
     }
     public int Price()
     {

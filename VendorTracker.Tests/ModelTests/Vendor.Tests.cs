@@ -73,7 +73,7 @@ namespace VendorTracker.Test
     [TestMethod]
     public void AddOrder_AddOrderObjectToOrdersProperty_Void()
     {
-      Order testOrder = new Order("bread", 2);
+      Order testOrder = new Order("bread", 2, "7/24/2020");
       Vendor testVendor = new Vendor("Tommy", "great food");
       testVendor.AddOrder(testOrder);
       int orderListLength = testVendor.Orders.Count;

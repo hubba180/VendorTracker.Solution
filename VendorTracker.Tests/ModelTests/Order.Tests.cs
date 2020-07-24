@@ -11,23 +11,25 @@ namespace VendorTracker.Test
     [TestMethod]
     public void OrderConstructor_InstantiateNewOrderObject_Order()
     {
-      Order testOrder = new Order("bread", 2);
+      Order testOrder = new Order("bread", 2, "7/24/2020");
       Assert.AreEqual(typeof(Order), testOrder.GetType());
     }
     [TestMethod]
     public void GetPropertyTypes_InstantiateTypeAndQuantity_StringAndNumber()
     {
-      Order testOrder = new Order("Bread", 2);
+      Order testOrder = new Order("Bread", 2, "7/24/2020");
       string type = "Bread";
       int quantity = 2;
+      string date = "7/24/2020";
       Assert.AreEqual(type, testOrder.Type);
       Assert.AreEqual(quantity, testOrder.Quantity);
+      Assert.AreEqual(date, testOrder.Date);
     }
     [TestMethod]
     public void Price_CalculateOrderPrice_Int()
     {
-      Order breadOrder = new Order("Bread", 6);
-      Order pastryOrder = new Order("Pastry", 6);
+      Order breadOrder = new Order("Bread", 6, "7/24/2020");
+      Order pastryOrder = new Order("Pastry", 6, "7/24/2020");
       int answer1 = 20;
       int answer2 = 10;
       Assert.AreEqual(answer1, breadOrder.Price());
