@@ -6,12 +6,12 @@ using VendorTracker.Models;
 namespace VendorTracker.Test
 {
   [TestClass]
-  public class VendorTests 
+  public class VendorTests : IDisposable
   {
-    // public void Dispose()
-    // {
-    //   Vendor.ClearAll();
-    // }
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
     [TestMethod]
     public void VendorConstructor_ProperlyInstantiateVendor_Vendor()
     {
