@@ -31,7 +31,7 @@ namespace VendorTracker.Models
       {
         if (searchId == _instances[i].Id)
         {
-          return _instances[5];
+          return _instances[i];
         }
       }
       return _instances[searchId - 1];
