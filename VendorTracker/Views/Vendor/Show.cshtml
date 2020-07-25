@@ -11,7 +11,7 @@
 <ul>
   @foreach (Order element in Model["orders"])
   {
-    <li><a href="/vendors/@Model["vendor"].Id/orders/@Model["orders"].Id/show">@element.Quantity @element.Type's</a></li>
+    <li><a href="/vendors/@Model["vendor"].Id/orders/@element.Id">@element.Type @element.Date</a></li>
   }
 </ul>
 <br>
